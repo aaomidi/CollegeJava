@@ -38,6 +38,7 @@ public class Project1 extends IProject {
     @Override
     public void test(int count) {
         Random random = new Random();
+        trace.debug("DEBUG START");
         for (int i = 0; i < count; i++) {
             int length = random.nextInt(101) - 50;
             int width = random.nextInt(101) - 50;
@@ -52,9 +53,9 @@ public class Project1 extends IProject {
             } catch (IllegalArgumentException ex) {
                 trace.debug("\nCould not create Box with given information:\n >Length: %d\n >Width: %d\n >Height: %d", length, width, height);
             }
-
+            trace.debug("End Box )))");
         }
-        trace.debug("End Box )))");
+        trace.debug("DEBUG END");
     }
 
 }
