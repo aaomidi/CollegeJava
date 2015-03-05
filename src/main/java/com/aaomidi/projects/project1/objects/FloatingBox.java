@@ -4,7 +4,8 @@ package com.aaomidi.projects.project1.objects;
  * Created by Amir on 2015-03-03.
  */
 public class FloatingBox {
-    private final double constant = 1.06;
+    // Static, because there is no reason to waste extra memory space for a constant value between the servers.
+    private static final double constant = 1.06;
     private final double length;
     private final double width;
     private final double height;

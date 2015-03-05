@@ -24,7 +24,7 @@ Class: FloatingBox
 
 Fields: 
 
-* ***1.06 constant*** which is a **double** type value. **Not accessible publicly** and a **final** value since it can not change after the object is constructed.
+* ***1.06 constant*** which is a **double** type value. **Not accessible publicly** and a **final** value since it can not change after the object is constructed. The value is also **static** to stop java from allocating memory simply for a constant value that is the same between different instances of class.
 * ***length*** which is a **double** type value. **Not accessible publicly** and a **final** value since it can not change after the object is constructed.
 * ***width*** which is a **double** type value. **Not accessible publicly** and a **final** value since it can not change after the object is constructed.
 * ***height*** which is a **double** type value. **Not accessible publicly** and a **final** value since it can not change after the object is constructed.
