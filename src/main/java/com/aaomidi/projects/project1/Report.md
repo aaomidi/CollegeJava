@@ -1,6 +1,6 @@
-#Project 1#
+# Project 1 #
 
-##Question:##
+## Question ##
 
 We were tasked to create a program that can calculate the surface area mass and draft of a barge using it's length (l), width (w) and height (h).
 
