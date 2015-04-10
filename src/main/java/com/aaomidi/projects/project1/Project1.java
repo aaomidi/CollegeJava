@@ -11,6 +11,11 @@ import java.util.Scanner;
  */
 public class Project1 extends IProject {
 
+
+    public Project1(String name, int year, int month, int day) {
+        super(name, year, month, day);
+    }
+
     @Override
     public void execute() {
         Scanner scanner = new Scanner(System.in);

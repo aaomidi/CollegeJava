@@ -18,7 +18,7 @@ public class FloatingBox {
      * @param width  Width of the floating box.
      * @param height Height of the floating box.
      */
-    public FloatingBox(double length, double width, double height) {
+    public FloatingBox(double length, double width, double height) throws IllegalArgumentException {
         if (length <= 0 || width <= 0 || height <= 0) {
             throw new IllegalArgumentException();
         }
