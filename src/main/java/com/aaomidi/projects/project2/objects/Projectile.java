@@ -7,14 +7,13 @@ public class Projectile {
     @Getter
     private final double thrownAngle; // Between 0 and 90
     @Getter
-    private final double initialVelocity; // Non negative.
 
+    private final double initialVelocity; // Non negative.
     /* Class use only */
     private Double horizontalVelocity;
     private Double verticalVelocity;
     private Double travelTime;
     private Double travelDistance;
-
     public Projectile(double thrownAngle, double initialVelocity) throws IllegalArgumentException {
         if (thrownAngle > 90 || thrownAngle < 0 || initialVelocity < 0) {
             throw new IllegalArgumentException("The input did not have correct information. Angle must be between 0 and 90.\nInitial speed must be a non negative number.");
@@ -23,6 +22,7 @@ public class Projectile {
         this.thrownAngle = thrownAngle;
         this.initialVelocity = initialVelocity;
     }
+
 
     public Double getVerticalVelocity() {
         if (verticalVelocity != null) return verticalVelocity;
@@ -56,5 +56,29 @@ public class Projectile {
     public String toString() {
         return String.format("Given information:\n >Thrown Angle: %.2f\n >Initial Velocity: %.2f\n>>Vertical Component of Velocity: %.2f\n>>Horizontal Component of Velocity: %.2f\n>>Travel Time: %.2f\n>>Travel Distance: %.2f",
                 getThrownAngle(), getInitialVelocity(), getVerticalVelocity(), getHorizontalVelocity(), getTravelTime(), getTravelDistance());
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Projectile)) return false;
+
+        Projectile that = (Projectile) o;
+
+        if (Double.compare(that.initialVelocity, initialVelocity) != 0) return false;
+        if (Double.compare(that.thrownAngle, thrownAngle) != 0) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        temp = Double.doubleToLongBits(thrownAngle);
+        result = (int) (temp ^ (temp >>> 32));
+        temp = Double.doubleToLongBits(initialVelocity);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        return result;
     }
 }

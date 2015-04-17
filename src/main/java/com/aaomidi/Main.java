@@ -1,7 +1,9 @@
 package com.aaomidi;
 
+import com.aaomidi.classes.IProject;
 import com.aaomidi.projects.project1.Project1;
 import com.aaomidi.projects.project2.Project2;
+import com.aaomidi.projects.project3.Project3;
 
 import java.util.Calendar;
 
@@ -11,11 +13,12 @@ import java.util.Calendar;
 public class Main {
 
     public static void main(String[] args) {
-        Project1 project1;
-        Project2 project2;
+        IProject project1, project2, project3;
+
         project1 = new Project1("Floating Box", 2015, Calendar.MARCH, 3);
         project2 = new Project2("Projectile", 2015, Calendar.APRIL, 10);
+        project3 = new Project3("Triangles", 2015, Calendar.APRIL, 17);
 
-        project2.test(100);
+        project3.execute();
     }
 }
