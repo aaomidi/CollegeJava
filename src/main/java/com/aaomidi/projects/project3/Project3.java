@@ -14,7 +14,7 @@ public class Project3 extends IProject {
     public void execute() {
         Scanner scanner = new Scanner(System.in);
         double sideA, sideB, sideC;
-        trace.say("Please enter the three sides of the triangle. Separate your emeries with spaces.");
+        trace.say("Please enter the three sides of the triangle. Separate your entries with spaces.");
         sideA = scanner.nextDouble();
         sideB = scanner.nextDouble();
         sideC = scanner.nextDouble();

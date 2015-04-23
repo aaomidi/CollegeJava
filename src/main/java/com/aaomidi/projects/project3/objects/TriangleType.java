@@ -31,7 +31,7 @@ public class TriangleType {
 
     @Override
     public String toString() {
-        return String.format("The triangle is a/an %s %s Triangle", angleType.toString(), sideType.toString());
+        return String.format("The triangle is a/an %s %s Triangle.", angleType.toString(), sideType.toString());
     }
 
     public enum SideType {

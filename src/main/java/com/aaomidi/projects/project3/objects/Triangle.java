@@ -2,7 +2,7 @@ package com.aaomidi.projects.project3.objects;
 
 
 public class Triangle {
-    public static final double maxAngle = 180;
+    public static final double MAX_ANGLE = 180;
 
     private final double sideA;
     private final double sideB;
@@ -13,7 +13,7 @@ public class Triangle {
     private TriangleType triangleType;
 
     public Triangle(double sideA, double sideB, double sideC) throws IllegalArgumentException {
-        if (sideA > 100 || sideB > 100 || sideC > 100 || sideA <= 0 || sideB <= 0 || sideC <= 0 || sideA > sideB + sideC || sideB > sideA + sideC || sideC > sideA + sideB) {
+        if (sideA > 100 || sideB > 100 || sideC > 100 || sideA <= 0 || sideB <= 0 || sideC <= 0 || sideA >= sideB + sideC || sideB >= sideA + sideC || sideC >= sideA + sideB) {
             throw new IllegalArgumentException("Sides must be between 0 and 100. The triangle must be a valid triangle");
         }
         this.sideA = sideA;
@@ -21,7 +21,7 @@ public class Triangle {
         this.sideC = sideC;
         this.angle1 = Math.toDegrees(Math.acos((Math.pow(sideB, 2) + Math.pow(sideC, 2) - Math.pow(sideA, 2)) / (2 * sideB * sideC)));
         this.angle2 = Math.toDegrees(Math.acos((Math.pow(sideA, 2) + Math.pow(sideC, 2) - Math.pow(sideB, 2)) / (2 * sideA * sideC)));
-        this.angle3 = maxAngle - (angle1 + angle2);
+        this.angle3 = MAX_ANGLE - (angle1 + angle2);
 
     }
 
@@ -60,6 +60,16 @@ public class Triangle {
         return sideC;
     }
 
-
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Triangle)) {
+            return false;
+        }
+        Triangle t = (Triangle) obj;
+        if (t.getSideA() == this.sideA && t.getSideB() == this.sideB && t.getSideC() == this.sideC) {
+            return true;
+        }
+        return false;
+    }
 }
 
