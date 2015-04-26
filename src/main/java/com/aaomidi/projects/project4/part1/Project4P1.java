@@ -21,6 +21,7 @@ public class Project4P1 extends IProject {
         HashSet<Integer> set1 = fillArray();
         trace.say("Please enter the contents of the second stack. Enter Q when done.");
         HashSet<Integer> set2 = fillArray();
+        // Another method would've been Set#retainAll(Collection<?> c).
         Sets sets = new Sets(set1, set2);
         HashSet<Integer> intersected = sets.intersection();
         for (Integer i : intersected) {
