@@ -23,6 +23,6 @@ public class Main {
         project4P1 = new Project4P1("Arrays and Sets", 2015, Calendar.APRIL, 24);
         project4P2 = new Project4P2("Matrices", 2015, Calendar.APRIL, 24);
 
-        project4P2.execute();
+        project4P1.execute();
     }
 }

@@ -10,6 +10,7 @@ import java.util.Scanner;
  * Created by Amir on 2015-04-18.
  */
 public class Project4P1 extends IProject {
+    Scanner scanner = new Scanner(System.in);
 
     public Project4P1(String name, int year, int month, int day) {
         super(name, year, month, day);
@@ -24,22 +25,22 @@ public class Project4P1 extends IProject {
         // Another method would've been Set#retainAll(Collection<?> c).
         Sets sets = new Sets(set1, set2);
         HashSet<Integer> intersected = sets.intersection();
+        trace.say("Intersected sets: ");
         for (Integer i : intersected) {
-            System.out.println(i);
+            System.out.printf("%d ", i);
         }
     }
 
     private HashSet<Integer> fillArray() {
-        Scanner scanner = new Scanner(System.in);
         HashSet<Integer> set = new HashSet<>();
         do {
             try {
                 set.add(scanner.nextInt());
             } catch (Exception ex) {
+                scanner.nextLine();
                 break;
             }
         } while (true);
-        System.out.flush();
         return set;
     }
 
