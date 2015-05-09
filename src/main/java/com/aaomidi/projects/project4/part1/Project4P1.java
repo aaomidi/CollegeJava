@@ -1,6 +1,6 @@
 package com.aaomidi.projects.project4.part1;
 
-import com.aaomidi.classes.IProject;
+import com.aaomidi.classes.Project;
 import com.aaomidi.projects.project4.part1.objects.Sets;
 
 import java.util.HashSet;
@@ -9,7 +9,7 @@ import java.util.Scanner;
 /**
  * Created by Amir on 2015-04-18.
  */
-public class Project4P1 extends IProject {
+public class Project4P1 extends Project {
     Scanner scanner = new Scanner(System.in);
 
     public Project4P1(String name, int year, int month, int day) {

@@ -1,11 +1,11 @@
 package com.aaomidi.projects.project3;
 
-import com.aaomidi.classes.IProject;
+import com.aaomidi.classes.Project;
 import com.aaomidi.projects.project3.objects.Triangle;
 
 import java.util.Scanner;
 
-public class Project3 extends IProject {
+public class Project3 extends Project {
     public Project3(String name, int year, int month, int day) {
         super(name, year, month, day);
     }

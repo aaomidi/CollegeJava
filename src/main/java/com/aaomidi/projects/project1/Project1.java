@@ -1,6 +1,6 @@
 package com.aaomidi.projects.project1;
 
-import com.aaomidi.classes.IProject;
+import com.aaomidi.classes.Project;
 import com.aaomidi.projects.project1.objects.FloatingBox;
 
 import java.util.Random;
@@ -9,7 +9,7 @@ import java.util.Scanner;
 /**
  * Created by Amir on 2015-03-03.
  */
-public class Project1 extends IProject {
+public class Project1 extends Project {
 
 
     public Project1(String name, int year, int month, int day) {

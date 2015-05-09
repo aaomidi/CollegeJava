@@ -1,13 +1,13 @@
 package com.aaomidi.projects.project5;
 
-import com.aaomidi.classes.IProject;
+import com.aaomidi.classes.Project;
 import com.aaomidi.projects.project5.objects.PIEstimation;
 import com.aaomidi.projects.project5.objects.Vieta;
 import com.aaomidi.projects.project5.objects.Wallis;
 
 import java.util.Scanner;
 
-public class Project5 extends IProject {
+public class Project5 extends Project {
     public Project5(String name, int year, int month, int day) {
         super(name, year, month, day);
         PIEstimation vieta = new Vieta("Vieta");

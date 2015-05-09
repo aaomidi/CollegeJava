@@ -1,12 +1,12 @@
 package com.aaomidi.projects.project2;
 
-import com.aaomidi.classes.IProject;
+import com.aaomidi.classes.Project;
 import com.aaomidi.projects.project2.objects.Projectile;
 
 import java.util.Random;
 import java.util.Scanner;
 
-public class Project2 extends IProject {
+public class Project2 extends Project {
 
     public Project2(String name, int year, int month, int day) {
         super(name, year, month, day);
