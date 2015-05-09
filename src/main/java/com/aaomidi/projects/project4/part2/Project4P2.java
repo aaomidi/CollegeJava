@@ -1,11 +1,11 @@
 package com.aaomidi.projects.project4.part2;
 
-import com.aaomidi.classes.IProject;
+import com.aaomidi.classes.Project;
 import com.aaomidi.projects.project4.part2.objects.Matrix;
 
 import java.util.Scanner;
 
-public class Project4P2 extends IProject {
+public class Project4P2 extends Project {
     public Project4P2(String name, int year, int month, int day) {
         super(name, year, month, day);
     }
